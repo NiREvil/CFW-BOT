@@ -1,12 +1,12 @@
 /**
 * @ts-nocheck   <!--GAMFC-->version base on commit 43fad05dcdae3b723c53c226f8181fc5bd47223e, time is 2023-06-22 15:20:05 UTC<!--GAMFC-END-->.
-*   Last Update: 10:59 - sunday, 30 June 2024 by REvil
+* Last Update: 10:59 - sunday, 30 June 2024 by REvil
 * Many thanks to https://github.com/cmliu/edgetunnel
 */
+
 import { connect } from 'cloudflare:sockets';
 
-// How to generate your own UUID: https://www.uuidgenerator.net/
-// OR in the [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
+// generate UUID
 let userID = 'uuid';
 
 let proxyIP = 'newproxy';
@@ -1176,7 +1176,7 @@ function 配置信息(UUID, 域名地址) {
 		传输层安全 = ['',false];
 	}
 
-	const v2ray = `${协议类型}://${用户ID}@${地址}:${端口}?encryption=${加密方式}&security=${传输层安全[0]}&sni=${SNI}&fp=${指纹}&type=${传输层协议}&host=${伪装域名}&path=${encodeURIComponent(路径)}#${encodeURIComponent(别名)}`;
+	const v2ray = `${协议类型}://${用户ID}@${地址}:${端口}?encryption=${加密方式}&security=${传输层安全[0]}&sni=${域名地址}&fp=${指纹}&type=${传输层协议}&host=${伪装域名}&path=${encodeURIComponent(路径)}#${encodeURIComponent(别名)}`;
 	const clash = `- type: ${协议类型}
   name: ${别名}
   server: ${地址}
@@ -1185,7 +1185,7 @@ function 配置信息(UUID, 域名地址) {
   network: ${传输层协议}
   tls: ${传输层安全[1]}
   udp: false
-  sni: ${SNI}
+  sni: ${域名地址}
   client-fingerprint: ${指纹}
   ws-opts:
     path: "${路径}"
@@ -1691,7 +1691,7 @@ function subAddresses(host,UUID,noTLS,newAddressesapi,newAddressescsv,newAddress
 		}
 		
 		const 协议类型 = atob(啥啥啥_写的这是啥啊);
-		const vlessLink = `${协议类型}://${UUID}@${address}:${port}?encryption=none&security=tls&sni=${伪装域名}&fp=random&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
+		const vlessLink = `${协议类型}://${UUID}@${address}:${port}?encryption=none&security=tls&sni=${域名地址}&fp=random&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
 			
 		return vlessLink;
 	}).join('\n');
