@@ -5,17 +5,18 @@ let mytoken= 'username';
 
 
 let addresses = [
-	"icook.hk:2083#CFW -1",
-	"zula.ir:443#CFW -2",
-	"vista.com:2053#CFW -3",
-	"www.csgo.com:8443#CFW -4",
-	"sky.rethinkdns.com:2053#CFW -5",
-	"www.speedtest.net:443#CFW -6",
-	"time.cloudflare.com:2053#CFW -7",
-	"go.inmobi.com:2053#CFW -8",
-	"creativecommons.org:443#CFW -9",
-	"time.cloudflare.com:8443#CFW -10",
-	"www.csgo.com:2083#CFW -10",
+	"zula.ir:443#CFW-√1",
+  	"icook.hk:2083#CFW-√2",
+ 	"vista.com:2053#CFW-√3",
+ 	"cdnjs.com:8443#CFW-√4",
+ 	"go.inmobi.com:2053#CFW-√5",
+ 	"www.csgo.com:2083#CFW-√6",
+	"www.speedtest.net:443#CFW-√7",
+	"sky.rethinkdns.com:2053#CFW-√8",
+	"time.cloudflare.com:2053#CFW-√9",
+	"creativecommons.org:443#CFW-√10",
+	"speed.cloudflare.com:8443#CFW-√11",
+
 ];
 
 // addresses api
