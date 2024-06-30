@@ -1,6 +1,11 @@
+/**
+* WorkerVless2sub  -  Thanks to https://github.com/cmliu
+* @ts-nocheck   Last Update: 16:59 - Sunday, 30 June 2024 by REvil
+* 
+*/
+
 
 // After the deployment is completed, add this after the URL to obtain the default node of the subscriber./auto
-
 let mytoken= 'username';
 
 
@@ -416,10 +421,10 @@ export default {
 				if(proxyhosts && (host.includes('.workers.dev') || host.includes('pages.dev'))) {
 					最终路径 = `/${path}`;
 					伪装域名 = `${host}`;
-					节点备注 = `${EndPS} RE`;
-					sni = 伪装域名;
+					节点备注 = `${EndPS} REvil`;
+					const sni = 伪装域名;
 				}
-				const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&sni=${sni}&alpn=http%2F1.1&fp=randomized&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid)}`;
+				const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&sni=${伪装域名}&alpn=http%2F1.1&fp=randomized&type=ws&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid)}`;
 			
 				return vlessLink;
 			}).join('\n');
