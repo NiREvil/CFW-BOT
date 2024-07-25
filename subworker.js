@@ -1,6 +1,6 @@
 /**
 * WorkerVless2sub  -  Thanks to https://github.com/cmliu
-* @ts-nocheck   Last Update: 16:59 - Sunday, 30 June 2024 by REvil
+* @ts-nocheck   Last Update: 12:59 UTC - Thursday, 25 July 2024 by REvil
 * 
 */
 
@@ -25,8 +25,9 @@ let addresses = [
 ];
 
 // addresses api
-// let addressesapi = ['https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/ips.txt'];
-let addressesapi = ['addressapi'];
+let addressesapi = [
+	'https://raw.githubusercontent.com/NiREvil/CFW-BOT/main/ips.txt',
+];
 
 let DLS = 4;
 let addressescsv = [
@@ -40,7 +41,6 @@ let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [
-	'proxyip.aliyun.fxxk.dedyn.io',
 	'proxyip.multacom.fxxk.dedyn.io',
 	'proxyip.vultr.fxxk.dedyn.io',
 ];
